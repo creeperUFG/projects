@@ -61,4 +61,7 @@ routes.get(
   ProjectsController.getExtensionProjectsWordcloudByAcademicUnit
 );
 
+// Return projects by keywords
+routes.post("/university/projects", ProjectsController.getProjectsByKeywords);
+
 module.exports = routes;

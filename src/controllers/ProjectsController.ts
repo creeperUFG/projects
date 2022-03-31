@@ -379,4 +379,52 @@ module.exports = {
       return response.status(500);
     }
   },
+
+  async getProjectsByKeywords(
+    request: express.Request,
+    response: express.Response
+  ) {
+    // #swagger.tags = ['Projects']
+    // #swagger.description = 'Endpoint para obter projetos baseado em um array de keywords.'
+
+    /* #swagger.parameters['keywords'] = {
+        in: "body",
+        required: true,
+        description: "Array of project keywords",
+        type: "array",
+        example:  ["Inteligência", "artificial"]
+       } */
+
+    // remove acentos e coloca as strings do array em minusculo
+    let { keywords }: { keywords: (string | undefined)[] } = request.body;
+
+    try {
+      keywords = keywords.map((element) => {
+        if (typeof element === "string") {
+          const word = element
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase();
+          console.log(word);
+          return word;
+        }
+        return;
+      });
+    } catch (e) {
+      return response
+        .status(400)
+        .json({ Error: "You must be inform the keywords array." });
+    }
+    try {
+      let projects: typeof Projects = await Projects.find({
+        keywords: {
+          $all: keywords,
+        },
+      });
+
+      return response.json({ projects }).status(201);
+    } catch (err) {
+      return response.status(500);
+    }
+  },
 };

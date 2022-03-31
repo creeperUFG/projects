@@ -1,6 +1,7 @@
 import string
 from nltk.tokenize import word_tokenize
 import nltk
+import unidecode
 import json
 import requests
 
@@ -17,7 +18,7 @@ def removeStopWords(text):
 
     tokens_without_sw = [word for word in text_tokens if not word in stopwords]
     tokens_without_sw = [
-        word for word in tokens_without_sw if not word in punctuation]
+        unidecode.unidecode(word).lower() for word in tokens_without_sw if not word in punctuation]
 
     return tokens_without_sw
 
