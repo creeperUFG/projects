@@ -137,20 +137,20 @@ module.exports = {
         tipo_projeto: "Ensino",
       });
 
-      const words: { word: String; qnt: number }[] = [];
+      const words: { text: String; value: number }[] = [];
 
       // Adiciona cada palavra no array de words e a quantidade de ocorrencias
       // da palavra
       teachingProjects?.forEach((project: ProjectsDTO) => {
         project?.keywords?.forEach((w) => {
           const index = words.findIndex(
-            (element: { word: String; qnt: number }) => element.word === w
+            (element: { text: String; value: number }) => element.text === w
           );
 
           if (index !== -1) {
-            words[index].qnt = words[index].qnt + 1;
+            words[index].value = words[index].value + 1;
           } else {
-            words.push({ word: w, qnt: 1 });
+            words.push({ text: w, value: 1 });
           }
         });
       });
@@ -175,20 +175,20 @@ module.exports = {
         tipo_projeto: "Pesquisa",
       });
 
-      const words: { word: String; qnt: number }[] = [];
+      const words: { text: String; value: number }[] = [];
 
       // Adiciona cada palavra no array de words e a quantidade de ocorrencias
       // da palavra
       researchProjects?.forEach((project: ProjectsDTO) => {
         project?.keywords?.forEach((w) => {
           const index = words.findIndex(
-            (element: { word: String; qnt: number }) => element.word === w
+            (element: { text: String; value: number }) => element.text === w
           );
 
           if (index !== -1) {
-            words[index].qnt = words[index].qnt + 1;
+            words[index].value = words[index].value + 1;
           } else {
-            words.push({ word: w, qnt: 1 });
+            words.push({ text: w, value: 1 });
           }
         });
       });
@@ -213,20 +213,20 @@ module.exports = {
         tipo_projeto: "Extensão",
       });
 
-      const words: { word: String; qnt: number }[] = [];
+      const words: { text: String; value: number }[] = [];
 
       // Adiciona cada palavra no array de words e a quantidade de ocorrencias
       // da palavra
       extensionProjects?.forEach((project: ProjectsDTO) => {
         project?.keywords?.forEach((w) => {
           const index = words.findIndex(
-            (element: { word: String; qnt: number }) => element.word === w
+            (element: { text: String; value: number }) => element.text === w
           );
 
           if (index !== -1) {
-            words[index].qnt = words[index].qnt + 1;
+            words[index].value = words[index].value + 1;
           } else {
-            words.push({ word: w, qnt: 1 });
+            words.push({ text: w, value: 1 });
           }
         });
       });
@@ -260,20 +260,20 @@ module.exports = {
         nome_unidade_projeto,
       });
 
-      const words: { word: String; qnt: number }[] = [];
+      const words: { text: String; value: number }[] = [];
 
       // Adiciona cada palavra no array de words e a quantidade de ocorrencias
       // da palavra
       teachingProjects?.forEach((project: ProjectsDTO) => {
         project?.keywords?.forEach((w) => {
           const index = words.findIndex(
-            (element: { word: String; qnt: number }) => element.word === w
+            (element: { text: String; value: number }) => element.text === w
           );
 
           if (index !== -1) {
-            words[index].qnt = words[index].qnt + 1;
+            words[index].value = words[index].value + 1;
           } else {
-            words.push({ word: w, qnt: 1 });
+            words.push({ text: w, value: 1 });
           }
         });
       });
@@ -307,20 +307,20 @@ module.exports = {
         nome_unidade_projeto,
       });
 
-      const words: { word: String; qnt: number }[] = [];
+      const words: { text: String; value: number }[] = [];
 
       // Adiciona cada palavra no array de words e a quantidade de ocorrencias
       // da palavra
       researchProjects?.forEach((project: ProjectsDTO) => {
         project?.keywords?.forEach((w) => {
           const index = words.findIndex(
-            (element: { word: String; qnt: number }) => element.word === w
+            (element: { text: String; value: number }) => element.text === w
           );
 
           if (index !== -1) {
-            words[index].qnt = words[index].qnt + 1;
+            words[index].value = words[index].value + 1;
           } else {
-            words.push({ word: w, qnt: 1 });
+            words.push({ text: w, value: 1 });
           }
         });
       });
@@ -354,20 +354,20 @@ module.exports = {
         nome_unidade_projeto,
       });
 
-      const words: { word: String; qnt: number }[] = [];
+      const words: { text: String; value: number }[] = [];
 
       // Adiciona cada palavra no array de words e a quantidade de ocorrencias
       // da palavra
       extensionProjects?.forEach((project: ProjectsDTO) => {
         project?.keywords?.forEach((w) => {
           const index = words.findIndex(
-            (element: { word: String; qnt: number }) => element.word === w
+            (element: { text: String; value: number }) => element.text === w
           );
 
           if (index !== -1) {
-            words[index].qnt = words[index].qnt + 1;
+            words[index].value = words[index].value + 1;
           } else {
-            words.push({ word: w, qnt: 1 });
+            words.push({ text: w, value: 1 });
           }
         });
       });
