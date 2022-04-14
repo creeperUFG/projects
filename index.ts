@@ -23,7 +23,10 @@ app.use(express.json());
 
 app.use(routes);
 
-var port = 3344;
+let port: number | string = process.env.PORT;
+if (port == null || port == "") {
+  port = 3333;
+}
 
 app.use("/api-doc", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
