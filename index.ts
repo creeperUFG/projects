@@ -23,8 +23,8 @@ app.use(express.json());
 
 app.use(routes);
 
-let port: number | string = process.env.PORT;
-if (port == null || port == "") {
+let port: number | string | undefined = process.env.PORT;
+if (!port) {
   port = 3333;
 }
 
