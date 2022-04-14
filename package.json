@@ -7,7 +7,9 @@
     "node": "16.14.2"
   },
   "scripts": {
-    "start": "npx ts-node src/config/server.ts",
+    "start": "node build/src/config/server.js",
+    "build": "tsc",
+    "postinstall": "npm run build",
     "dev": "nodemon -x ts-node src/config/server.ts",
     "swagger-autogen": "ts-node swagger.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
