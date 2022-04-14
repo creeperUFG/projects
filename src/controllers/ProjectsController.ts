@@ -1,4 +1,4 @@
-import express from "express";
+import * as express from "express";
 const Projects = require("./../models/Projects");
 
 interface ProjectsDTO {
