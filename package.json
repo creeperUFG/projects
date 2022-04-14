@@ -7,7 +7,7 @@
     "node": "16.14.2"
   },
   "scripts": {
-    "start": "tsc && node src/config/server.js",
+    "start": "ls && node src/config/server.js",
     "build": "tsc",
     "postinstall": "npm run build",
     "dev": "nodemon -x ts-node src/config/server.ts",
