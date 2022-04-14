@@ -64,4 +64,22 @@ routes.get(
 // Return projects by keywords
 routes.post("/university/projects", ProjectsController.getProjectsByKeywords);
 
+// Return projects by keywords
+routes.post(
+  "/university/projects/teaching",
+  ProjectsController.getTeachingProjectsByKeywords
+);
+
+// Return projects by keywords
+routes.post(
+  "/university/projects/research",
+  ProjectsController.getResearchProjectsByKeywords
+);
+
+// Return projects by keywords
+routes.post(
+  "/university/projects/extension",
+  ProjectsController.getExtensionProjectsByKeywords
+);
+
 module.exports = routes;
