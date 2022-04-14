@@ -25,7 +25,7 @@ app.use(routes);
 
 let port: number | string | undefined = process.env.PORT;
 if (!port) {
-  port = 3333;
+  port = 3344;
 }
 
 app.use("/api-doc", swaggerUi.serve, swaggerUi.setup(swaggerFile));
