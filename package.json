@@ -1,7 +1,7 @@
 {
-  "name": "students",
+  "name": "projects",
   "version": "1.0.0",
-  "description": "Microsservice - Students",
+  "description": "Microsservice - Projects",
   "main": "index.js",
   "scripts": {
     "start": "npx ts-node index.ts",
